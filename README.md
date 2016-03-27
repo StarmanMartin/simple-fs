@@ -16,7 +16,7 @@ go get github.com/starmanmaritn/simple-fs
 import "github.com/starmanmaritn/simple-fs"
 
 func main() {
-    fs.CopyFolder("src", "dest")    
+    fs.SyncFile("src", "dest")    
 }
 ```
 
