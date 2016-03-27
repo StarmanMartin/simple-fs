@@ -28,6 +28,8 @@ func main() {
 * [`ReadLines`](#ReadLines)
 * [`CheckIfFolderUpdated`](#CheckIfFolderUpdated)
 
+<a name="SyncFolder"></a>
+
 ### SyncFolder (source, dest string) (err error)
 
 With the SyncFolder method it is possible to copy elements from a *destination* folder to a *source* folder.
@@ -44,6 +46,8 @@ if the *source* timestamp is newer the *source* gets copied
 
 * `error` nil if success. Else some error
 
+<a name="SyncFolderAndIngonre"></a>
+
 ### SyncFolderAndIngonre (source, dest string, ignoreList ...string) (err error)
 
 With the SyncFolderAndIngonre method is the same as the SyncFolder but it is possible to ignore a list of folders.
@@ -58,6 +62,8 @@ it is only allowed to add a global folder name as ignored folder. For example *.
 #### return
 
 * `error` nil if success. Else some error
+
+<a name="SyncFile"></a>
 
 ### SyncFile (source string, dest string) (err error)
 
@@ -75,6 +81,8 @@ if the *source* timestamp is newer the *source* gets copied
 
 * `error` nil if success. Else some error
 
+<a name="ReadLines"></a>
+
 ### ReadLines(path string, lineCounts int) ([]string, error)
 
 ReadLines reads a number of lines in a *source* file.
@@ -88,6 +96,8 @@ ReadLines reads a number of lines in a *source* file.
 
 * `[]string` lines of a flie
 * `error` nil if success. Else some error
+
+<a name="CheckIfFolderUpdated"></a>
 
 ### CheckIfFolderUpdated(source string, lastCheck time.Time) (bool, error)
 
