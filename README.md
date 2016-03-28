@@ -27,6 +27,7 @@ func main() {
 * [`SyncFile`](#SyncFile)
 * [`ReadLines`](#ReadLines)
 * [`CheckIfFolderUpdated`](#CheckIfFolderUpdated)
+* [`Exists`](#Exists)
 
 <a name="SyncFolder"></a>
 
@@ -113,3 +114,18 @@ It compares all sub files and folder to make sure if the folder ist up to date.
 
 * `bool` `true` if the folder and all the sub files and sub folders are up to date
 * `error` nil if success. Else some error
+
+<a name="Exists"></a>
+
+### Exists(path string) (bool, error)
+
+Exists checks if a folders or a file exists.
+
+#### Parameter
+
+* `path` *string* Absolute path to the folder or file
+
+#### return
+
+* `bool` `true` if the folder and exists
+* `error` only if file exists but not able to read

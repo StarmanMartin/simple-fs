@@ -26,3 +26,20 @@ func ReadLines(path string, lineCounts int) ([]string, error) {
 
 	return lines, scanner.Err()
 }
+
+//Exists checks if a folders or a file exists.
+//
+//Parameter
+//
+//`path` *string* Absolute path to the folder or file
+//
+//return
+//
+//`bool` `true` if the folder and exists
+//`error` only if file exists but not able to read
+func Exists(path string) (bool, error) {
+    _, err := os.Stat(path)
+    if err == nil { return true, nil }
+    if os.IsNotExist(err) { return false, nil }
+    return true, err
+}

@@ -13,7 +13,7 @@ func CopyFolder(source, dest string) (err error) {
 
 //CopyFolderAndIngonre is deprecated
 func CopyFolderAndIngonre(source, dest string, ingnoreList ...string) (err error) {
-    return CopyFolderAndIngonre(source, dest, ingnoreList...)
+    return SyncFolderAndIngonre(source, dest, ingnoreList...)
 }
 
 //SyncFolder method is to copy elements from a *destination* folder to a *source* folder.
